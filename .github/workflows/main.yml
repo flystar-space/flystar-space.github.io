@@ -1,0 +1,10 @@
+on push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    step:
+    - run: git clone -b 2.0 https://github.com/Harry-zklcdc/OnlineJudgeDeploy.git
+    - run: cd OnlineJudgeDeploy
+    - run: sudo -E docker-compose up -d
+    - run: docker ps -a
